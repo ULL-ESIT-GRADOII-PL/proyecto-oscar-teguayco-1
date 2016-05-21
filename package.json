@@ -1,7 +1,7 @@
 {
-  "name": "workspace",
+  "name": "PL0 Analizer",
   "version": "1.0.0",
-  "description": "* [PEG.js](http://pegjs.majda.cz/) * [DataMapper](http://datamapper.org/docs/) * [PL0 Grammar. Wikipedia](http://en.wikipedia.org/wiki/Recursive_descent_parser) * [ULL-ETSII-GRADO-PL-13-14](https://plus.google.com/u/0/communities/107031495100582318205) * [PL Entorno virtual de docencia institucional 2013/2014 ULL](http://campusvirtual.ull.es/1314/course/view.php?id=1104)",
+  "description": "Final project: PL0 analizer",
   "main": "app.js",
   "dependencies": {
     "ejs": "^2.4.1",
@@ -15,15 +15,8 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/crguezl/pegjscalc.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/crguezl/pegjscalc/issues"
   },
-  "homepage": "https://github.com/crguezl/pegjscalc#readme"
 }
