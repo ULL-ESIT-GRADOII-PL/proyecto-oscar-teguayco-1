@@ -1,4 +1,4 @@
-# Sinatra example Using PEG.js and DataMapper
+# Gramática PL/0 con PEGJS
 
 * [PEG.js](http://pegjs.majda.cz/)
 * [DataMapper](http://datamapper.org/docs/)

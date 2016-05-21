@@ -1,7 +1,7 @@
-#!/usr/local/bin/node --harmony_destructuring
+#!/home/ubuntu/.nvm/versions/node/v4.4.3/bin/node --harmony_destructuring
 var util = require('util');
 var fs = require('fs');
-var PEG = require("./pl0node.js");
+var PEG = require("./lib/pl0.js");
 var fileName = process.argv[2] || 'input1.pl0';
 fs.readFile(fileName, 'utf8', function (err,input) {
   if (err) {
