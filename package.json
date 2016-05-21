@@ -1,5 +1,5 @@
 {
-  "name": "PL0 Analizer",
+  "name": "pl0-analizer",
   "version": "1.0.0",
   "description": "Final project: PL0 analizer",
   "main": "app.js",
