@@ -1,0 +1,41 @@
+<h1>Analizador de PL0 ampliado usando PEG.js</h1>
+<div id="content">
+  <p>
+  <nav>
+  <ul>
+      <li><a href="beq2times3" >beq2times3</a></li>
+      <li><a href="if" >if</a></li>
+      <li><a href="ifelseamb" class = "current">ifelseamb</a></li>
+      <li><a href="input1" >input1</a></li>
+  </ul>
+  </nav>
+  <p class="loadfile">
+    <input type="file" id="examples" />
+  </p>
+  <table>
+    <tr>
+      <td>
+        <form action="/save" method="post">
+          <textarea id="input" name="input"
+                    autofocus cols = "50" rows = "10">
+                        if 4 then if 5 then a = 2 else b = 8
+                    </textarea>
+          <br/>
+          <label for="saveas">Save as</label>
+          <input id="saveas" type="text" name="fname"
+                 title="name" pattern="\w+" />
+        </form>
+      </td>
+      <td><button id="parse" type="button">parse</button></td>
+    </tr>
+  </table>
+  </p>
+  <div class="output">
+    <pre>
+        <span id="output"></span> <!-- Output goes here! -->
+    </pre>
+  </div>
+</div>
+
+<script src="../lib/pl0.js"></script>
+<script src="../public/main.js"></script>
