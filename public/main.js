@@ -29,7 +29,7 @@
     
     $('#download').click(function(e) {
       var link = document.createElement('a');
-      link.href = 'images.jpg';
+      link.href = 'https://docs.google.com/uc?id=0B0jH18Lft7ypSmRjdWg1c082Y2M';
       link.download = 'example.pl0';
       document.body.appendChild(link);
       link.click();
