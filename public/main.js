@@ -38,7 +38,7 @@
       r.readAsText(f);
     });
     
-    $("download").click(function() {
+    $("#download").click(function() {
       console.log("click");
       var blob = new Blob("this is a test");
       var link = document.createElement('a');
