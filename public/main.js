@@ -26,10 +26,6 @@
         $('#output').html('<div class="error"><pre>\n' + String(e) + '\n</pre></div>');
       }
     });
-    
-    function download() {
-      console.log("click!!");
-    }
   
     // volcando contenido del fichero seleccionado al textarea
     $("#examples").change(function(ev) {
@@ -40,6 +36,14 @@
         input.innerHTML = contents;
       }
       r.readAsText(f);
+    });
+    
+    $("download").click(function() {
+      var blob = new Blob("this is a test");
+      var link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = "example.pl0";
+      link.click();
     });
   });
 
