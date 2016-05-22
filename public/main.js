@@ -3,20 +3,19 @@
 
   // función para volcar el contenido del fichero arrastrado al textarea
   const handleDragFileSelect = (evt) => {
-  evt.stopPropagation();
-  evt.preventDefault();
-
-  var files = evt.dataTransfer.files; // FileList object.
-
-  var reader = new FileReader();
-  reader.onload = (e) => {
-    $("#input").val(e.target.result);
-    evt.target.style.background = "purple";
-  };
+    evt.stopPropagation();
+    evt.preventDefault();
   
-  reader.readAsText(files[0]);
-}
+    var files = evt.dataTransfer.files; // FileList object.
   
+    var reader = new FileReader();
+    reader.onload = (e) => {
+      $("#input").val(e.target.result);
+      evt.target.style.background = "purple";
+    };
+    
+    reader.readAsText(files[0]);
+  }
 
   $(document).ready(function() {
     $('#parse').click(function() {
@@ -26,6 +25,11 @@
       } catch (e) {
         $('#output').html('<div class="error"><pre>\n' + String(e) + '\n</pre></div>');
       }
+    });
+    
+    $('#download').click(function(e) {
+      e.preventDefault();  //stop the browser from following
+      window.location.href = 'uploads/file.doc';
     });
   
     // volcando contenido del fichero seleccionado al textarea
@@ -39,7 +43,6 @@
       r.readAsText(f);
     });
   });
-
 
   let dropZone = $('#input')[0];
   dropZone.addEventListener('drop', handleDragFileSelect, false);
