@@ -49,7 +49,7 @@ textarea {
   background: url(hoja_cuadros.png);
   border: solid 1px; }
 
-#parse {
+button {
   font-weight: bold;
   cursor: pointer;
   padding: 15%;
@@ -57,7 +57,7 @@ textarea {
   border: 1px solid #ccc;
   background: linear-gradient(to right, #f2f6f8 0%, #d8e1e7 35%, #b5c6d0 97%, #b5c6d0 100%);
   border-radius: 8px 8px 8px 8px; }
-  #parse:hover {
+  button:hover {
     background: linear-gradient(to right, #7091a4 0%, #7091a4 7%, #8aa5b7 32%, #97b8c8 78%, #97b8c8 100%);
     color: white; }
 
