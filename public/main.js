@@ -59,6 +59,6 @@
 
   let dropZone = $('#input')[0];
   dropZone.addEventListener('drop', handleDragFileSelect, false);
-  let inputFile = $('.inputfile')[0];
+  let inputFile = $('#examples')[0];
   inputFile.addEventListener('change', handleFileSelect, false);
 })();
