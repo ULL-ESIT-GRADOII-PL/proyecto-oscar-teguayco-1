@@ -1,7 +1,8 @@
 (() => {
 "use strict";
 
-/*  const handleDragFileSelect = (evt) => {
+  // función para volcar el contenido del fichero arrastrado al textarea
+  const handleDragFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
 
@@ -14,7 +15,7 @@
   };
   
   reader.readAsText(files[0])
-}*/
+}
   
 
   $(document).ready(function() {
@@ -40,8 +41,8 @@
   });
 
 
-  /*let dropZone = $('#input')[0];
-  dropZone.addEventListener('drop', handleDragFileSelect, false);*/
+  let dropZone = $('#input')[0];
+  dropZone.addEventListener('drop', handleDragFileSelect, false);
 })();
 
   
