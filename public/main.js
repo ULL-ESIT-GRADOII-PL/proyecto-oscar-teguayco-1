@@ -38,15 +38,20 @@
       r.readAsText(f);
     });
     
+    // Descargar el AST en un fichero example.pl0
     $("#download").click(function() {
-      console.log("click");
+      console.log("download");
       var text = [];
       text[0] = $('#output').text();
-      var blob = new Blob(text);
-      var link = document.createElement('a');
-      link.href = window.URL.createObjectURL(blob);
-      link.download = "example.pl0";
-      link.click();
+      
+      // si hay contenido, descargamos
+      if (text[0] != "") {
+        var blob = new Blob(text);
+        var link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = "example.pl0";
+        link.click();
+      }
     });
   });
 
