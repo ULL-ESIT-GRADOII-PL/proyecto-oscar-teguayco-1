@@ -1,7 +1,7 @@
 (() => {
 "use strict";
 
-  const handleDragFileSelect = (evt) => {
+/*  const handleDragFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
 
@@ -14,7 +14,7 @@
   };
   
   reader.readAsText(files[0])
-}
+}*/
   
 
   $(document).ready(function() {
@@ -40,8 +40,8 @@
   });
 
 
-  let dropZone = $('#input')[0];
-  dropZone.addEventListener('drop', handleDragFileSelect, false);
+  /*let dropZone = $('#input')[0];
+  dropZone.addEventListener('drop', handleDragFileSelect, false);*/
 })();
 
   
