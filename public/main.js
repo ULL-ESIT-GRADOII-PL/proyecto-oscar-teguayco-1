@@ -40,7 +40,7 @@
   });
 
 
-  let dropZone = $('.drop_zone')[0];
+  let dropZone = $('#input')[0];
   dropZone.addEventListener('drop', handleDragFileSelect, false);
 })();
 
