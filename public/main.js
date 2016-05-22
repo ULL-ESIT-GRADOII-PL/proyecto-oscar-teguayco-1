@@ -39,11 +39,12 @@
     });
     
     $("download").click(function() {
-      var blob = new Blob("this is a test");
+      console.log("click");
+     /* var blob = new Blob("this is a test");
       var link = document.createElement('a');
       link.href = window.URL.createObjectURL(blob);
       link.download = "example.pl0";
-      link.click();
+      link.click();*/
     });
   });
 
