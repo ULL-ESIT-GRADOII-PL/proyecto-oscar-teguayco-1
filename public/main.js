@@ -30,7 +30,7 @@
     $('#download').click(function(e) {
       var link = document.createElement('a');
       link.href = 'images.jpg';
-      link.download = 'Download.jpg';
+      link.download = 'example.pl0';
       document.body.appendChild(link);
       link.click();
     });
