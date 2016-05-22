@@ -38,14 +38,14 @@
       r.readAsText(f);
     });
     
-   /* $("download").click(function() {
+    $("download").click(function() {
       console.log("click");
       var blob = new Blob("this is a test");
       var link = document.createElement('a');
       link.href = window.URL.createObjectURL(blob);
       link.download = "example.pl0";
       link.click();
-    });*/
+    });
   });
 
   let dropZone = $('#input')[0];
