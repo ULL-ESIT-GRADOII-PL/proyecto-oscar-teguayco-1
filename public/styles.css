@@ -52,7 +52,7 @@ textarea {
 button {
   font-weight: bold;
   cursor: pointer;
-  padding: 15%;
+  padding: 10px;
   margin: 0 10px 20px 0;
   border: 1px solid #ccc;
   background: linear-gradient(to right, #f2f6f8 0%, #d8e1e7 35%, #b5c6d0 97%, #b5c6d0 100%);
@@ -61,6 +61,10 @@ button {
     background: linear-gradient(to right, #7091a4 0%, #7091a4 7%, #8aa5b7 32%, #97b8c8 78%, #97b8c8 100%);
     color: white; }
 
+ #download{
+   -webkit-transform: translate(20%, 35%);
+   transform:translate(20%, 35%);
+ }
 label {
   margin-left: 15%; }
 

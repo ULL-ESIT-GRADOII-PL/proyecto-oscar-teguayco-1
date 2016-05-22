@@ -12,9 +12,9 @@
   <p class="loadfile">
     <input type="file" id="examples" />
   </p>
-  <p>
+  <!--<p>
     <button type="button" id="download">Download AST</button>
-  </p>
+  </p>-->
   <table>
     <tr>
       <td>
@@ -27,6 +27,7 @@ if 4 then if 5 then a = 2 else b = 8
           <label for="saveas">Save as</label>
           <input id="saveas" type="text" name="fname"
                  title="name" pattern="\w+" />
+          <center><button type="button" id="download">Download AST</button></center>
         </form>
       </td>
       <td><button id="parse" type="button">parse</button></td>
