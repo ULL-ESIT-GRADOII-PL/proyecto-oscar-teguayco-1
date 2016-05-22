@@ -27,18 +27,13 @@
       }
     });
     
-    function download(filename, text) {
-      var element = document.createElement('a');
-      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-      element.setAttribute('download', filename);
-    
-      element.style.display = 'none';
-      document.body.appendChild(element);
-    
-      element.click();
-    
-      document.body.removeChild(element);
-    }
+    $('#download').click(function(e) {
+      var link = document.createElement('a');
+      link.href = 'images.jpg';
+      link.download = 'Download.jpg';
+      document.body.appendChild(link);
+      link.click();
+    });
   
     // volcando contenido del fichero seleccionado al textarea
     $("#examples").change(function(ev) {
