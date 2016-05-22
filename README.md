@@ -1,9 +1,28 @@
-# Gramática PL/0 con PEGJS
+# Proyecto PPLL: Gramática PL/0 con PEGJS
+
+Desarrolladores
+---------------
+
+* Óscar David Martín Cabrera (aluxxxxxxxxxx)
+* Teguayco Gutiérrez González (alu0100825503)
+
+Tecnologías utilizadas
+----------------------
+* SASS
+* Heroku
+* JQuery
+
+Sobre el proyecto
+-----------------
+Se ha desarrollado un analizador del lenguaje PL0 usando PEGjs.
+
+* [Enunciado del proyecto](https://casianorodriguezleon.gitbooks.io/pl1516/content/proyectos/proyectopl.html)
+* [Campus Virtual PPLL 15/16](https://campusvirtual.ull.es/1516/course/view.php?id=178)
+
+Referencias
+-----------
 
 * [PEG.js](http://pegjs.majda.cz/)
 * [DataMapper](http://datamapper.org/docs/)
 * [PL0 Grammar. Wikipedia](http://en.wikipedia.org/wiki/Recursive_descent_parser)
-* [ULL-ETSII-GRADO-PL-13-14](https://plus.google.com/u/0/communities/107031495100582318205)
-* [PL Entorno virtual de docencia institucional 2013/2014 ULL](http://campusvirtual.ull.es/1314/course/view.php?id=1104)
-
 * [Heroku app](https://pl-project-oscar-teguayco.herokuapp.com/)

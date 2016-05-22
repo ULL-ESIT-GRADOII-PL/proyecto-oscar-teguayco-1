@@ -49,7 +49,7 @@
         var blob = new Blob(text);
         var link = document.createElement('a');
         link.href = window.URL.createObjectURL(blob);
-        link.download = "example.pl0";
+        link.download = "ast.txt";
         link.click();
       }
     });
