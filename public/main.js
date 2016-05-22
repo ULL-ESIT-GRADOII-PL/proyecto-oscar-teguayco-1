@@ -40,7 +40,9 @@
     
     $("#download").click(function() {
       console.log("click");
-      var blob = new Blob(["this is a test"]);
+      var text = [];
+      text[0] = $('#output').text();
+      var blob = new Blob(text);
       var link = document.createElement('a');
       link.href = window.URL.createObjectURL(blob);
       link.download = "example.pl0";
