@@ -27,14 +27,9 @@
       }
     });
     
-    $('#download').click(function(e) {
-      var link = document.createElement("div"); 
-      var newContent = document.createTextNode("Hi there and greetings!");
-      link.appendChild(newContent);
-      link.download = 'example.pl0';
-      document.body.appendChild(link);
-      link.click();
-    });
+    function download() {
+      console.log("click!!");
+    }
   
     // volcando contenido del fichero seleccionado al textarea
     $("#examples").change(function(ev) {
