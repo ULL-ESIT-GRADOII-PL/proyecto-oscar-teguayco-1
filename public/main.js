@@ -1,6 +1,22 @@
 (() => {
 "use strict";
 
+  // función para volcar el contenido del fichero seleccionado al textarea
+  const handleFileSelect = (evt) => {
+  evt.stopPropagation();
+  evt.preventDefault();
+
+  console.log(evt);
+  var files = evt.target.files; // FileList object.
+
+  var reader = new FileReader();
+  reader.onload = (e) => {
+    $("#input").val(e.target.result);
+  };
+  
+  reader.readAsText(files[0])
+}
+
   // función para volcar el contenido del fichero arrastrado al textarea
   const handleDragFileSelect = (evt) => {
   evt.stopPropagation();
@@ -14,7 +30,7 @@
     evt.target.style.background = "purple";
   };
   
-  reader.readAsText(files[0])
+  reader.readAsText(files[0]);
 }
   
 
@@ -43,7 +59,6 @@
 
   let dropZone = $('#input')[0];
   dropZone.addEventListener('drop', handleDragFileSelect, false);
+  let inputFile = $('.inputfile')[0];
+  inputFile.addEventListener('change', handleFileSelect, false);
 })();
-
-  
-
