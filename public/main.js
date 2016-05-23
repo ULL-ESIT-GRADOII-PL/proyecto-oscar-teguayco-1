@@ -18,7 +18,13 @@
   }
 
   $(document).ready(function() {
+    let textarea = document.getElementById("input");
+    if (window.localStorage && localStorage.textarea) {
+      textarea.value = localStorage.textarea;
+    }
+    
     $('#parse').click(function() {
+      if (window.localStorage) localStorage.textarea = textarea.value;
       try {
         var result = pl0.parse($('#input').val());
         $('#output').html(JSON.stringify(result,undefined,2));
