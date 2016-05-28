@@ -7,10 +7,11 @@ function fact(n);
     return 4;
   { 
     if n <= 1 then return 1 
-    else return n*fact(n-1);
+    else return n*fact(n-1, 2);
   };
 {
   n = 9 * 3 + m;
   z = 0;
-  b = fact(n);
+  b = fact(n, 2);
+  c = chuchu();
 }
