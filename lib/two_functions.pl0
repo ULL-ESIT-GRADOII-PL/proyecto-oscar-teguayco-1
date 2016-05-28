@@ -1,0 +1,16 @@
+const A = 50, 
+      B = 10;
+var y;
+function sum(x); 
+    var x;
+    function returnX();
+        var z, y;
+        return x;
+    {
+      x = y;
+      x = 0;  
+    };
+    
+{
+    x = 5;
+}
