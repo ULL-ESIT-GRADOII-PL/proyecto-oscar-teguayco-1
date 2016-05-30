@@ -1,5 +1,6 @@
 (() => {
 "use strict";
+  var PEG = require("../lib/pl0.js");
 
   // función para volcar el contenido del fichero arrastrado al textarea
   const handleDragFileSelect = (evt) => {
@@ -26,8 +27,8 @@
     $('#parse').click(function() {
       if (window.localStorage) localStorage.textarea = textarea.value;
       try {
-        var result = pl0.parse($('#input').val());
-        $('#output').html(JSON.stringify(result,undefined,2));
+        var resultSyntax = PEG.parse($('#input').val());
+        $('#output').html(JSON.stringify(resultSyntax,undefined,2));
       } catch (e) {
         $('#output').html('<div class="error"><pre>\n' + String(e) + '\n</pre></div>');
       }

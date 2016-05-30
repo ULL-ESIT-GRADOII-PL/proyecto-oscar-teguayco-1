@@ -8,6 +8,7 @@ function fact(n);
   { 
     if n <= 1 then return 1 
     else return n*fact(n-1, 2);
+    c = factorial();
   };
 {
   n = 9 * 3 + m;

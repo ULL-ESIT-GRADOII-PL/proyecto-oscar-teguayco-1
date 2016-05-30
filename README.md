@@ -11,6 +11,7 @@ Tecnologías utilizadas
 * SASS
 * Heroku
 * JQuery
+* LocalStorage
 
 Sobre el proyecto
 -----------------

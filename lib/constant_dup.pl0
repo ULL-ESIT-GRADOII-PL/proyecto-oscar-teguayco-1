@@ -1,5 +1,6 @@
 const A = 4, 
-      B = 30;
+      B = 30,
+      A = 6;
 var b, n;
 function fact(n);
     var t;
