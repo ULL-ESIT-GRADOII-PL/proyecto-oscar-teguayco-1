@@ -1,5 +1,7 @@
 body {
-  font-family: Impact, sans-serif; }
+  font-family: Impact, sans-serif; 
+  background-image: url("fondo-blanco.jpg");
+}
 
 h1 {
   color: #0d4f66;

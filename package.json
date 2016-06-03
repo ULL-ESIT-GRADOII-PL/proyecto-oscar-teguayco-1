@@ -4,9 +4,11 @@
   "description": "Final project: PL0 analizer",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.15.1",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "express-ejs-layouts": "^2.1.0",
+    "mongoose": "^4.4.19",
     "path": "^0.12.7",
     "pegjs": "^0.9.0"
   },

@@ -1,6 +1,5 @@
 (() => {
 "use strict";
-  var PEG = require("../lib/pl0.js");
 
   // función para volcar el contenido del fichero arrastrado al textarea
   const handleDragFileSelect = (evt) => {
@@ -27,8 +26,10 @@
     $('#parse').click(function() {
       if (window.localStorage) localStorage.textarea = textarea.value;
       try {
-        var resultSyntax = PEG.parse($('#input').val());
+        var resultSyntax = pl0.parse($('#input').val());
         $('#output').html(JSON.stringify(resultSyntax,undefined,2));
+        var semanticResult = semantic(resultSyntax);
+        $('#semantic').html(semanticResult);
       } catch (e) {
         $('#output').html('<div class="error"><pre>\n' + String(e) + '\n</pre></div>');
       }
@@ -61,7 +62,41 @@
       }
     });
   });
+  
+/*Volcamos en el text area el ejemplo correspondiente al boton desde la BD*/
+$('button.examples').each((_, y) => {
+  $(y).click(() => {
+      $.get("/dataname/" + $(y).text(), { },
+          (data) => {
+              $("#input").val(data);
+          });
+  });
+});
 
+
+$("#saveas").bind("keypress", {}, keypressInBox);
+function keypressInBox(e) {
+  var code = (e.keyCode ? e.keyCode : e.which);
+  var name = $('#saveas').val();
+  var expresion = $('#input').val();
+  
+  if (code == 13) { //Enter keycode                        
+      e.preventDefault();
+      $.post("/datain/" + name,{
+        content: expresion
+      });
+      //console.log(name);
+      //console.log(expresion);
+      
+    /*          $("#guardar").click(() => {
+          if (window.localStorage) localStorage.original = original.value;
+          $.get("/mongo/" + $("#titulo").val(), {
+            content: $("#original").val()
+          });
+        });*/
+  }
+};
+   
   let dropZone = $('#input')[0];
   dropZone.addEventListener('drop', handleDragFileSelect, false);
 })();

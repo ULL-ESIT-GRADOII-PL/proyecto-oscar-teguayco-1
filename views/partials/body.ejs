@@ -3,10 +3,10 @@
   <p>
   <nav>
   <ul>
-      <li><a href="beq2times3" >beq2times3</a></li>
-      <li><a href="if" >if</a></li>
-      <li><a href="ifelseamb" class = "current">ifelseamb</a></li>
-      <li><a href="input1" >input1</a></li>
+      <li><!--<a class = "examples" >constant_dup</a>--><button class = "examples">constant_dup</button></li>
+      <li><a class = "examples" href="if" >if</a></li>
+      <li><a class = "examples" href="ifelseamb" class = "current">ifelseamb</a></li>
+      <li><a class = "examples" href="input1" >input1</a></li>
   </ul>
   </nav>
   <p class="loadfile">
@@ -33,10 +33,12 @@ if 4 then if 5 then a = 2 else b = 8
   </p>
   <div class="output">
     <pre>
-        <span id="output"></span> <!-- Output goes here! -->
+        <span class="ast" id="output"></span> <!-- Output goes here! -->
+        <span class="semanticErrors" id="semantic"></span>
     </pre>
   </div>
 </div>
 
-<script src="pl0.js"></script>
+<script src="/pl0.js"></script>
+<script src="/semantic.js"></script>
 <script src="main.js"></script>
