@@ -29,7 +29,8 @@
         var resultSyntax = pl0.parse($('#input').val());
         $('#output').html(JSON.stringify(resultSyntax,undefined,2));
         var semanticResult = semantic(resultSyntax);
-        $('#semantic').html(semanticResult);
+        $('#semantic').text(semanticResult);
+        //$('#semantic').html(semanticResult);
       } catch (e) {
         $('#output').html('<div class="error"><pre>\n' + String(e) + '\n</pre></div>');
       }

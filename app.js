@@ -28,6 +28,10 @@ app.get('/', (request, response) => {
   response.render('index', { title: 'Final project - PL' });
 });
 
+app.get('/grammar', (request, response) => {
+  response.render('grammar', { title: 'Grmática PL0 ampliada'});
+});
+
 var TData = require("./models/t_data");
 
 app.post('/datain/:name', function(request, response){

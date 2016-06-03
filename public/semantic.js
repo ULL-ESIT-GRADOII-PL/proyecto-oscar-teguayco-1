@@ -145,7 +145,7 @@
                                     symbolTable))) { 
                
                     errorsMessage += "incorrect use of function '" + child[property].func.value + 
-                                "' (it has not been declared or its call has a wrong number of parameters)" + "\n";                         
+                                "' (it has not been declared or its call has a wrong number of arguments)" + "\n";                         
                 }
            }
            
@@ -168,11 +168,11 @@
  
  var semantic = (tree) => {
     console.log("\nen semantic.js");
-     
+    errorsMessage = "";
     // Construir la tabla de cada nodo y ver si hay redeclaraciones
     eachBlockPre(tree, addTableToBlock, null);
     eachBlockPre(tree, checkSymbolsDeclaration);
-    console.log("\n" + errorsMessage);
+    console.log(errorsMessage);
     return errorsMessage;
  }
  
