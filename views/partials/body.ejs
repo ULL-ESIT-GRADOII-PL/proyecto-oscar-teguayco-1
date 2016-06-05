@@ -3,10 +3,13 @@
   <p>
   <nav>
   <ul>
-      <li><!--<a class = "examples" >constant_dup</a>--><button class = "examples">constant_dup</button></li>
-      <li><a class = "examples" href="if" >if</a></li>
-      <li><a class = "examples" href="ifelseamb" class = "current">ifelseamb</a></li>
-      <li><a class = "examples" href="input1" >input1</a></li>
+      <li><button class = "example">constant_dup</button></li>
+      <li><button class = "example">input</button></li>
+      <li><button class = "example">input2</button></li>
+      <li><button class = "example">not_declared_variables</button></li>
+      <li><button class = "example">switch_1</button></li>
+      <li><button class = "example">twiceded</button></li>
+      <li><button class = "example">two_functions</button></li>
   </ul>
   </nav>
   <p class="loadfile">
@@ -21,9 +24,6 @@
 if 4 then if 5 then a = 2 else b = 8
                     </textarea>
           <br/>
-          <label for="saveas">Save as</label>
-          <input id="saveas" type="text" name="fname"
-                 title="name" pattern="\w+" />
           <center><button type="button" id="download">Download AST</button></center>
         </form>
       </td>
@@ -36,12 +36,8 @@ if 4 then if 5 then a = 2 else b = 8
       <p class="semanticErrors" id="semantic"></p>
       <p class="ast" id="output"></p> <!-- Output goes here! -->
     </pre>
-    <pre>
-      
-    </pre>
   </div>
 </div>
-
 <script src="/pl0.js"></script>
 <script src="/semantic.js"></script>
 <script src="main.js"></script>

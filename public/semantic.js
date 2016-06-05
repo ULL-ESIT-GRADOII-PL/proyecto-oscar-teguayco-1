@@ -145,7 +145,7 @@
                                     symbolTable))) { 
                
                     errorsMessage += "incorrect use of function '" + child[property].func.value + 
-                                "' (it has not been declared or its call has a wrong number of arguments)" + "\n";                         
+                                "' (it has not been declared or its call has a wrong number of arguments)\n";                         
                 }
            }
            
@@ -160,7 +160,10 @@
   * funciones) han sido declarados antes de su uso
   */
  var checkSymbolsDeclaration = (block) => {
-     console.log(block.main);
+     if (block.main.children == undefined) {
+         errorsMessage += "missing block\n";
+         return;
+     }
      block.main.children.forEach((child) => {
         searchChildInSymbolTable(child, block.symbolTable);
      });

@@ -65,7 +65,7 @@
   });
   
 /*Volcamos en el text area el ejemplo correspondiente al boton desde la BD*/
-$('button.examples').each((_, y) => {
+$('button.example').each((_, y) => {
   $(y).click(() => {
       $.get("/dataname/" + $(y).text(), { },
           (data) => {
@@ -74,30 +74,6 @@ $('button.examples').each((_, y) => {
   });
 });
 
-
-$("#saveas").bind("keypress", {}, keypressInBox);
-function keypressInBox(e) {
-  var code = (e.keyCode ? e.keyCode : e.which);
-  var name = $('#saveas').val();
-  var expresion = $('#input').val();
-  
-  if (code == 13) { //Enter keycode                        
-      e.preventDefault();
-      $.post("/datain/" + name,{
-        content: expresion
-      });
-      //console.log(name);
-      //console.log(expresion);
-      
-    /*          $("#guardar").click(() => {
-          if (window.localStorage) localStorage.original = original.value;
-          $.get("/mongo/" + $("#titulo").val(), {
-            content: $("#original").val()
-          });
-        });*/
-  }
-};
-   
   let dropZone = $('#input')[0];
   dropZone.addEventListener('drop', handleDragFileSelect, false);
 })();

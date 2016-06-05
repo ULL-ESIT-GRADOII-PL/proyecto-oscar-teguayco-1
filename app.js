@@ -25,42 +25,11 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', (request, response) => {     
-  response.render('index', { title: 'Final project - PL' });
+  response.render('layout', { title: 'Final project - PL' });
 });
 
-app.get('/grammar', (request, response) => {
-  response.render('grammar', { title: 'Grmática PL0 ampliada'});
-});
 
 var TData = require("./models/t_data");
-
-app.post('/datain/:name', function(request, response){
-  console.log(request);
-  let input = new TData({
-        "name": request.params.name,
-        "content": request.content
-    });
-
-    input.save(function(err) {
-        if (err) {
-            console.log(`Hubieron errores:\n${err}`);
-            return err;
-        }
-        console.log(`Guardado: ${input}`);
-    });
-});
-
-app.post('/save', (request, response) => {
-  /*$("#saveas").bind("keypress", {}, keypressInBox);
-
-  function keypressInBox(e) {
-    var code = (e.keyCode ? e.keyCode : e.which);
-    if (code == 13) { //Enter keycode                        
-        e.preventDefault();
-        console.log($('#saveas').val());
-    }
-  };*/
-});
 
 require('./models/routes')(app);
 

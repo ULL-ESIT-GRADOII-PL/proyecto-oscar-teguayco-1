@@ -44,23 +44,9 @@ module.exports = function(app){
         res.send(data);
     };
     
-    /*addDataJs = function(req, res){
-        var data = new TData({
-           name: req.params.name,
-           content: "hola mundo"
-        });
-        
-        data.save(function(err){
-            if(err) console.log('ERROR: Cant save. ' + err);
-            else console.log('Added new input');
-        });
-        res.send(data);
-    };*/
-    
     app.get('/data', findAll);
     app.get('/dataid/:id', findByID);
     app.get('/dataname/:name', findByName);
     app.post('/datadd', addData);
-    //app.post('/datain/:name', addDataJs);
     
 }
