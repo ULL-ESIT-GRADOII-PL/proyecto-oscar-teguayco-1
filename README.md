@@ -3,8 +3,8 @@
 Desarrolladores
 ---------------
 
-* Óscar David Martín Cabrera (aluxxxxxxxxxx)
-* Teguayco Gutiérrez González (alu0100825503)
+* Óscar David Martín Cabrera (alu0100705638@ull.edu.es)
+* Teguayco Gutiérrez González (alu0100825503@ull.edu.es)
 
 Tecnologías utilizadas
 ----------------------
@@ -30,3 +30,5 @@ Referencias
 * [PL0 Grammar. Wikipedia](http://en.wikipedia.org/wiki/Recursive_descent_parser)
 * [Heroku app](https://pl-project-oscar-teguayco.herokuapp.com/)
 * [Cloud9 Deploy](https://pl-project-alu0100825503.c9users.io/)
+ 
+Advertencia: Si la aplicación esta caida, puedes enviarnos un correo a cualquiera de los dos desarrolladores para arrancar de nuevo el despliegue.
